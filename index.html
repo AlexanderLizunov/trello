@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.js"></script>
+</head>
+<body>
+<div id='content'></div>
+
+<script type="text/babel">
+    // var cards =[
+    //
+    // ]
+    // class Welcome  {
+
+    class Header extends React.Component {
+        render () {
+            return (
+                <div className="header-section">
+                    <div className="header-item-cover">
+                        <button className="header-boards-button">
+                            Доски
+                        </button>
+                        <input placeholder="searchfield" />
+                    </div>
+                    <div className="header-item-cover">
+                        <a href="#" className="trello-logo-link">
+                            <img src="" alt="trello-logo" className="trello-logo-img"/>
+                        </a>
+                    </div>
+                    <div className="header-item-cover">
+                        <button className="login-button">login</button>
+                        <button className="user-button">
+                            <img src="#" alt="user" className="user-image"/>
+                        </button>
+                    </div>
+                </div>
+            )
+        }
+    };
+
+    class BoardSection extends React.Component {
+        render () {
+            return(
+                <div className="board-bordCover">
+                    <div className="board-header-cover">
+                        <div className="header-block-left">
+                            <p className="board-title">
+                                {this.props.BoardName}
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            )
+        }
+    };
+
+    class StateColumn extends React.Component{
+        render (){
+            return(
+                <div className="state-column">
+                    <p className="column-title">
+                        {this.props.StateName}
+                    </p>
+                </div>
+            )
+        }
+    }
+
+
+    ReactDOM.render(
+        <div>
+            <Header/>
+            <BoardSection BoardName="Kedi">
+            </BoardSection>
+            <StateColumn StateName="Task" />
+        </div>
+        ,
+        document.getElementById('content')
+    );
+
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+.join-section {
+  padding: 140px 0 70px;
+  text-align: center;
+  position: relative;
+  @include phones_landscape{
+    //padding: 0 0 50px;
+  }
+  &:after{
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/images/join-bg.jpg");
+    z-index: -1;
+    background-size: cover;
+  }
+}
+
+.join-container{
+  max-width: 1120px;
+}
+
+.join_block {
+  position: relative;
+  width: 80%;
+  max-width: 978px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.join_block-title {
+  color: #000000;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  @include phones_landscape{
+    font-size: 40px;
+  }
+  @include phones_L{
+    font-size: 32px;
+  }
+  @include phones_S{
+    font-size: 30px;
+  }
+}
+
+.join_button {
+  margin: 40px auto 0;
+  padding: 4px 10px 0;
+  height: 48px;
+  display: block;
+  max-width: 295px;
+  width: 40%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0.25rem 0.1875rem 0.875rem 0.0625rem rgba(0, 0, 0, .1);
+  transition: .5s;
+  background-color: #000001;
+  color: #dabe90;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  &:hover {
+    background-color: lighten(#0a0a0a, 10%) ;
+  }
+  @include laptop_1680{
+    margin-top: 40px;
+  }
+  @include phones_landscape{
+    width: 60%;
+    margin-top: 30px;
+  }
+  @include phones_L {
+    width: 80%;
+  }
+}
+
+.join_details {
+  text-align: left;
+  padding-top: 52px;
+  color: #333333;
+  font-size: 20px;
+  font-weight: 300;
+  @include phones {
+    text-align: center;
+  }
+}
+
+.join-button-second{
+  background-color: #3a0f2f;
+  color: white;
+}
+
+.join-today-comment{
+  margin-top: 36px;
+  display: block;
+  text-align: left;
+  color: #191919;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 34px;
+}

@@ -1,0 +1,300 @@
+.bound-modal {
+  display: none;
+  //-webkit-animation-name: animatetop;
+  //-webkit-animation-duration: 0.4s;
+  //animation-name: animatetop;
+  //animation-duration: 0.4s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  &.active {
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+  }
+  &__inner {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+  }
+  &__content {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 486px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+  }
+}
+
+body {
+  margin: 0;
+  position: relative;
+  &.backdrop {
+    //position: absolute;
+    //top: 0;
+    //bottom: 0;
+    //left: 0;
+    //right: 0;
+    z-index: 8888;
+    max-height: 100vh;
+    overflow: hidden;
+    padding-right: 17px;
+    .header-timer {
+      width: calc(100% - 17px);
+      @include laptop_S {
+        width: calc(100% - 18.133333px);
+      }
+      @include tablets {
+        width: 100%;
+      }
+    }
+    @include laptop_S {
+      padding-right: 18.133333px;
+    }
+    @include tablets {
+      padding-right: 0;
+    }
+
+  }
+
+}
+
+.platform-ios {
+  padding-right: 0 !important;
+  .header-timer {
+    width: 100% !important;
+    margin-right: 0 !important;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: gray;
+  transition: .7s;
+  a {
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+    width: 100%;
+    height: 100%;
+    display: block;
+    line-height: 30px;
+  }
+  @include phones_landscape {
+    right: 0;
+    top: 0;
+    background-color: gray;
+  }
+  &:hover {
+    background-color: lightgrey;
+  }
+}
+
+.subscribe-vk-ico {
+  width: 105px !important;
+  overflow: hidden;
+  border-radius: 4px;
+  @include laptop_S {
+    width: 113px !important;
+  }
+  @include tablets {
+    width: 120px !important;
+  }
+  @include phones_landscape {
+    width: 140px !important;
+  }
+}
+
+.modal-header {
+  padding: 40px 10px 45px;
+  border-bottom: none;
+  background-color: #1f1f1f;
+  box-shadow: 3px 4px 13px rgba(0, 0, 0, 0.19);
+}
+
+.modal-header h4 {
+  text-align: center;
+  font-size: 27px;
+  line-height: 30px;
+  color: #fffcfc;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.modal-title_comment {
+  display: block;
+  margin: 10px auto 0;
+  max-width: 300px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 21px;
+  color: #fffcfc;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.modal-title_text {
+  color: #fffcfc;
+  font-family: 'Droid Serif', serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  width: 93%;
+  max-width: 280px;
+  display: block;
+  margin: 15px auto 0;
+}
+
+.modal-body {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 60px;
+  background-color: rgba(128, 128, 128, .1);
+  border-top: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+.modal-body_title {
+  padding-top: 15px;
+  margin: 0 auto 24px;
+  max-width: 83%;
+  text-align: center;
+  color: #010101;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+  @include phones {
+    width: 93.75%;
+  }
+}
+
+.one-block {
+
+  margin: 0px auto 15px;
+  padding: 10px 0 8px;
+  text-align: center;
+  line-height: 1;
+  width: 93%;
+  max-width: 362px;
+  background-color: white;
+  border: 2px solid #191919;
+}
+
+.like-text {
+  margin: 0 10px 4px 0;
+  display: inline-block;
+  line-height: 1;
+  width: auto;
+  padding: 0;
+  text-align: left;
+  vertical-align: top;
+  margin-top: 3px;
+  color: #333;
+  font-size: 15px;
+  font-weight: 400;
+  @include phones {
+    margin-top: 6px;
+  }
+
+}
+
+.like-image {
+  width: auto;
+  display: inline-block;
+  vertical-align: top;
+
+  img {
+    position: relative;
+    display: inline-block;
+    height: 21px;
+    width: auto;
+    max-width: 107px;
+    @include phones {
+      height: 28px;
+
+    }
+  }
+  &:active {
+    img {
+      top: 3px;
+    }
+  }
+}
+
+.custom-button {
+  position: absolute;
+  padding: 0;
+  top: -14px;
+  right: -14px;
+  height: 28px;
+  width: 28px;
+  text-align: center;
+  color: #333333;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 28px;
+  border: none;
+  background-color: #e6e6e6;
+  border-radius: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+  display: none;
+  &:hover {
+    background-color: rgba(230, 230, 230, 0.7);
+  }
+}
+
+.done-btn {
+  transition: .3s;
+  display: table;
+  margin: auto;
+  text-transform: uppercase;
+  background-color: #c2e1e6;
+  padding: 10px 30px;
+  color: #333;
+  margin-top: 40px;
+  border: 1px solid black;
+  width: 40%;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  &:hover {
+    background: transparent;
+    //background: lighten($important-gold, 35%);
+    color: #000000;
+  }
+}
+
+.modal-body_comment {
+  color: #333;
+  font-family: 'Droid Serif', serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
+  width: 93%;
+
+  display: block;
+  margin: 20px auto 30px;
+}
+

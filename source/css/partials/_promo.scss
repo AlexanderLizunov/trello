@@ -1,0 +1,78 @@
+.content-cover{
+  padding-top: 36px;
+  background-image: url("../img/images/main-bg.jpg");
+  background-size: cover;
+}
+
+.promo-section {
+  text-align: center;
+  position: relative;
+}
+
+.promo-container {
+  max-width: 677px;
+  text-align: center;
+}
+
+.logo-cover{
+  margin: auto;
+  width: 80%;
+  max-width: 293px;
+  padding: 17px 0 19px;
+  background-color: white;
+  text-align: center;
+}
+
+.logo-image{
+  height: 54px;
+}
+
+
+
+.promo-title-comment {
+  margin-top: 90px;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+  @include tablets{
+    font-size: 32px;
+  }
+  @include phones_landscape {
+    font-size: 36px;
+  }
+  @include phones_L {
+    font-size: 28px;
+  }
+  @include phones_M {
+    font-size: 24px;
+  }
+  @include phones_S {
+    margin-top: 60px;
+    font-size: 20px;
+  }
+}
+
+.promo-title{
+  margin: 0 auto;
+  text-shadow: 0 6px 41px rgba(0, 0, 1, 0.15);
+  color: #ffffff;
+  font-size: 120px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.2;
+  @include phones_L{
+    font-size: 90px;
+  }
+  @include phones_S{
+    font-size: 70px;
+  }
+}
+
+.promo-block {
+  margin-top: 96px;
+  width: 100%;
+  @include phones_L{
+    margin-top: 50px;
+  }
+}

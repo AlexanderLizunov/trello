@@ -1,0 +1,156 @@
+.video-section {
+  padding: 110px 0 124px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  iframe {
+    display: inline-block;
+  }
+  @include tablets{
+    padding: 80px 0 40px;
+  }
+}
+
+.video-title{
+  margin-bottom: 76px;
+  display: block;
+  text-align: center;
+  width: 100%;
+  color: #191919;
+  font-family: "Abril Fatface", sans-serif;
+  font-size: 46px;
+  font-weight: 400;
+  text-transform: uppercase;
+  .prise-old{
+    color: #646464;
+    text-decoration: line-through;
+  }
+  .prise-new{
+    color: #b52b2b;
+  }
+  @include tablets{
+    margin-bottom: 30px;
+    font-size: 34px;
+  }
+  @include phones_L{
+    font-size: 30px;
+  }
+}
+
+.video-cover,
+.video-text-block {
+  display: block;
+  width: 50%;
+  text-align: left;
+  vertical-align: top;
+}
+
+.video-cover{
+  @include phones_landscape{
+    width: 100%;
+  }
+}
+
+.video-text-block {
+  padding-top: 70px;
+  background-color: rgba(222, 189, 169, .15);
+  text-align: right;
+  @include tablets{
+    padding-top: 40px;
+  }
+  @include phones_landscape {
+    width: 100%;
+    text-align: left;
+    padding-bottom: 30px;
+    padding-left: 20px;
+  }
+  //@include phones_L{
+  //  padding-bottom: 20px;
+  //}
+  //@include phones_M{
+  //  padding-bottom: 40px;
+  //}
+}
+
+.video-text-cover {
+  display: inline-block;
+  text-align: right;
+  max-width: 340px;
+  margin-right: 106px;
+  @include laptop_1280{
+    margin-right: 30px;
+  }
+  @include phones_landscape {
+    margin-right: 0;
+    width: 100%;
+    max-width: none;
+    text-align: left;
+  }
+}
+
+
+
+
+.thumb-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+
+}
+.thumb-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-text-tile{
+  color: #191919;
+  font-size: 25px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  @include phones_landscape{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.video-text{
+  margin-top: 70px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: justify-all;
+  color: #191919;
+  font-size: 25px;
+  text-transform: uppercase;
+  //@include screenTo1930{
+  //  line-height: 44px;
+  //}
+  @include laptop_1440{
+  font-size:  26px;
+    //line-height: 1.2;
+  }
+  @include laptop_1280{
+    margin-top: 20px;
+  }
+  @include laptop_S{
+    font-size: 23px;
+  }
+  @include tablets{
+    font-size: 19px;
+  }
+  @include phones_landscape{
+    text-align: center;
+  }
+  @include phones_L{
+    text-align: center;
+  }
+
+}
+
