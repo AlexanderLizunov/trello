@@ -10,20 +10,6 @@
 @import "helpers/mixin-bootstrap";
 @import "helpers/modals-bootstrap";
 @import 'helpers/colors';
-@import "partials/modal";
-@import "partials/header-timer";
-@import 'partials/timer';
-@import 'partials/promo';
-@import 'partials/form';
-@import "partials/form-hack";
-@import "partials/form-button";
-@import 'partials/details';
-@import "partials/winners";
-@import "partials/quote";
-@import "partials/footer";
-@import "partials/prize";
-@import "partials/location";
-@import "partials/join";
 
 html {
   font-family: "Open Sans", sans-serif;
@@ -37,19 +23,13 @@ html {
 
 }
 
-.clearfix {
-  &:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-  }
-}
 
 body {
   position: relative;
   margin: 0;
+  height: 100vh;
+  background-image: url("../img/images/main-bg.jpeg");
+  background-size: cover;
 }
 
 a {
@@ -69,50 +49,44 @@ a {
   content: "";
 }
 
-//.custom-container {
-//	//width: 93.75%;
-//	//max-width: 1340px;
-//	display: block;
-//	margin: auto;
-//	text-align: center;
-//}
+.header-section{
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0 , 0, 0.3 );
+}
 
-.footer-section {
-  display: block;
-  padding-top: 17px;
-  padding-bottom: 18px;
+.board-bordCover{
+  //display: flex;
+
+}
+
+.board-header-cover{
+  padding: 10px;
+  background-color: rgba(0, 0 , 0, 0.1 );
+  font-size: 20px;
+  font-weight: 800;
   width: 100%;
-  background-color: rgba(128, 128, 128, .4);
-  text-align: center;
-  font-family: 'Droid Serif', serif;
-  font-weight: 300;
-  font-size: 10px;
-  color: $text-grey;
-}
-
-
-.mauticform-row {
-
+  min-height: 100px;
   position: relative;
-  @include phones {
-    width: 100%;
-  }
+
 }
 
-.platform-ios {
-  .slider-button-left {
-    text-align: center;
-    line-height: 0;
-    padding: 0;
-    padding-bottom: 4px;
-  }
-  .slider-button-right {
-    text-align: center;
-    line-height: 0;
-    padding: 0;
-    padding-bottom: 4px;
-  }
+.state-column{
+  position: relative;
+  //height: ;
 }
 
+.task-state-cover{
+  margin-top: 8px;
+  display: flex;
+  padding: 10px;
+  justify-content: flex-start;
+}
 
-
+.state-column{
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+  align-items: stretch;
+}

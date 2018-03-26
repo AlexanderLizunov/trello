@@ -43,17 +43,37 @@
         }
     };
 
+    class CardItem extends React.Component{
+        render(){
+            return(
+
+                <div className="card-cover">
+                    <p className="Card-name">
+                        {this.props.CardName}
+                    </p>
+                </div>
+            )
+        }
+    }
+
     class StateColumn extends React.Component{
+        AddCard(props) {
+         alert('клик')
+        }
+
         render (){
             return(
                 <div className="state-column">
                     <p className="column-title">
                         {this.props.StateName}
                     </p>
+                    <button className="add-card-button" onClick={this.edit}> Добавить карточку</button>
                 </div>
             )
         }
     }
+
+
 
     class BoardSection extends React.Component {
         render () {
@@ -66,10 +86,12 @@
                             </p>
                         </div>
                     </div>
-                    <StateColumn StateName="Task"/>
-                    <StateColumn StateName="In process"/>
-                    <StateColumn StateName="ON aproval"/>
-                    <StateColumn StateName="Done"/>
+                    <div className="task-state-cover">
+                        <StateColumn StateName="Task"/>
+                        <StateColumn StateName="In process"/>
+                        <StateColumn StateName="ON approval"/>
+                        <StateColumn StateName="Done"/>
+                    </div>
                 </div>
             )
         }
@@ -81,8 +103,7 @@
     ReactDOM.render(
         <div>
             <Header/>
-            <BoardSection BoardName="Kedi">
-            </BoardSection>
+            <BoardSection BoardName="Kedi"/>
         </div>
         ,
         document.getElementById('content')
